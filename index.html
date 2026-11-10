@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apresentação interativa sobre ambientes de desenvolvimento em C#: Visual Studio, VS Code e Rider.">
+  <title>Ambientes de Desenvolvimento em C# | SDAC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <span class="brand-mark">C#</span>
+      <span>SDAC <small>· M6 Fundamentos de Programação</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#introducao">Introdução</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#comparacao">Comparação</a>
+      <a href="#exemplo">Exemplo</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><span class="pulse"></span> TRABALHO DE AVALIAÇÃO Nº 1</span>
+        <h1>Onde nasce o<br><span>código C#?</span></h1>
+        <p class="hero-subtitle">Uma visita interativa aos ambientes de desenvolvimento Visual Studio, Visual Studio Code e JetBrains Rider.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#introducao">Explorar o tema <span>↗</span></a>
+          <a class="button ghost" href="#quiz">Testar conhecimentos</a>
+        </div>
+        <div class="hero-meta">
+          <span>11.º T.G.E.I.</span><i></i><span>S.D.A.C. · M6</span><i></i><span>2026/2027</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de um editor de código">
+        <div class="floating-chip chip-one">C#</div>
+        <div class="floating-chip chip-two">.NET</div>
+        <div class="editor-window">
+          <div class="window-bar"><div class="dots"><b></b><b></b><b></b></div><span>Program.cs</span><span class="window-status">●</span></div>
+          <div class="editor-body">
+            <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+            <pre><span class="kw">using</span> System;
+
+<span class="kw">class</span> Program
+{
+  <span class="kw">static void</span> Main()
+  {
+    Console.WriteLine(
+      <span class="str">"Olá, turma!"</span>);
+  }
+}</pre>
+          </div>
+          <div class="editor-footer"><span>✓ Sem erros</span><span>C# · UTF-8</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#introducao">DESCOBRIR <span>↓</span></a>
+    </section>
+
+    <section class="section intro-section" id="introducao">
+      <div class="section-heading">
+        <span class="eyebrow">01 / INTRODUÇÃO</span>
+        <h2>O que é um ambiente<br>de desenvolvimento?</h2>
+      </div>
+      <div class="intro-grid">
+        <div>
+          <p class="lead">É um conjunto de ferramentas que ajuda um programador a <strong>escrever, organizar, executar, testar e corrigir</strong> código.</p>
+          <p>Estas ferramentas tornam o desenvolvimento de programas mais organizado e eficiente. No caso do C#, podem ajudar a criar aplicações para diferentes plataformas.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-icon">⌘</div>
+          <h3>IDE vs. editor de código</h3>
+          <p><strong>IDE:</strong> reúne várias ferramentas de desenvolvimento num só programa.</p>
+          <p><strong>Editor:</strong> centra-se na escrita de código e pode receber funcionalidades adicionais através de extensões.</p>
+        </div>
+      </div>
+      <div class="feature-strip">
+        <div><span>⌨</span><strong>Escrever</strong><small>Criar e editar código</small></div>
+        <div><span>▶</span><strong>Executar</strong><small>Testar o programa</small></div>
+        <div><span>⌕</span><strong>Depurar</strong><small>Procurar e corrigir erros</small></div>
+        <div><span>▤</span><strong>Organizar</strong><small>Gerir ficheiros e projetos</small></div>
+      </div>
+    </section>
+
+    <section class="section environments-section" id="ambientes">
+      <div class="section-heading">
+        <span class="eyebrow">02 / CONHECER OS PROGRAMAS</span>
+        <h2>Três ferramentas.<br><span>Objetivos semelhantes.</span></h2>
+        <p class="section-desc">Seleciona cada cartão para conhecer melhor um ambiente de desenvolvimento.</p>
+      </div>
+      <div class="environment-grid">
+        <article class="env-card" data-env="vs">
+          <img src="assets/visual-studio.svg" alt="Ilustração de uma janela do Visual Studio">
+          <div class="env-card-content">
+            <span class="tag purple">IDE</span>
+            <h3>Visual Studio</h3>
+            <p>Um ambiente integrado completo, desenvolvido pela Microsoft.</p>
+            <button class="text-button" data-open="vs">Explorar ambiente <span>→</span></button>
+          </div>
+        </article>
+        <article class="env-card" data-env="vscode">
+          <img src="assets/vscode.svg" alt="Ilustração de uma janela do Visual Studio Code">
+          <div class="env-card-content">
+            <span class="tag blue">EDITOR</span>
+            <h3>Visual Studio Code</h3>
+            <p>Um editor leve e personalizável, que pode ser ampliado com extensões.</p>
+            <button class="text-button" data-open="vscode">Explorar ambiente <span>→</span></button>
+          </div>
+        </article>
+        <article class="env-card" data-env="rider">
+          <img src="assets/rider.svg" alt="Ilustração de uma janela do JetBrains Rider">
+          <div class="env-card-content">
+            <span class="tag green">IDE</span>
+            <h3>JetBrains Rider</h3>
+            <p>Um IDE da JetBrains com ferramentas avançadas para desenvolvimento .NET.</p>
+            <button class="text-button" data-open="rider">Explorar ambiente <span>→</span></button>
+          </div>
+        </article>
+      </div>
+      <div class="detail-panel" id="detailPanel" aria-live="polite">
+        <div class="detail-icon">✦</div>
+        <div><span class="eyebrow">ESCOLHE UM CARTÃO</span><h3>Explora os ambientes</h3><p>Carrega em “Explorar ambiente” para veres as características, vantagens e utilizações de cada ferramenta.</p></div>
+      </div>
+    </section>
+
+    <section class="section comparison-section" id="comparacao">
+      <div class="section-heading">
+        <span class="eyebrow">03 / COMPARAR</span>
+        <h2>Qual é a diferença?</h2>
+        <p class="section-desc">Apesar de permitirem trabalhar com C#, não funcionam exatamente da mesma maneira.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Característica</th><th>Visual Studio</th><th>VS Code</th><th>Rider</th></tr></thead>
+          <tbody>
+            <tr><th>Tipo</th><td><span class="table-pill">IDE</span></td><td><span class="table-pill">Editor</span></td><td><span class="table-pill">IDE</span></td></tr>
+            <tr><th>Suporte a C#</th><td class="yes">✓ Integrado</td><td class="yes">✓ Com extensões</td><td class="yes">✓ Integrado</td></tr>
+            <tr><th>Depuração</th><td class="yes">✓</td><td class="yes">✓ Com configuração</td><td class="yes">✓</td></tr>
+            <tr><th>Windows</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th>Linux</th><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th>macOS</th><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Nota: a tabela apresenta as versões atuais para computadores. O Visual Studio completo é destinado ao Windows; o Visual Studio para Mac foi descontinuado em 2024.</p>
+      <div class="takeaway"><span>💡</span><p><strong>Ideia principal:</strong> o Visual Studio e o Rider são IDEs completos. O VS Code é um editor que ganha funcionalidades através de extensões.</p></div>
+    </section>
+
+    <section class="section code-section" id="exemplo">
+      <div class="section-heading">
+        <span class="eyebrow">04 / EXEMPLO PRÁTICO</span>
+        <h2>O mesmo código,<br><span>três ambientes.</span></h2>
+        <p class="section-desc">Este pequeno programa escreve uma mensagem na consola. O código C# é o mesmo, independentemente do ambiente utilizado.</p>
+      </div>
+      <div class="code-demo">
+        <div class="code-top"><div class="dots"><b></b><b></b><b></b></div><span>Program.cs</span><button id="copyCode" class="copy-button">Copiar código ⧉</button></div>
+        <pre><code><span class="code-purple">using</span> System;
+
+<span class="code-purple">class</span> Program
+{
+    <span class="code-purple">static void</span> Main()
+    {
+        Console.WriteLine(<span class="code-green">"Olá, turma!"</span>);
+    }
+}</code></pre>
+        <div class="code-bottom"><span>● C#</span><span id="copyStatus">Exemplo ilustrativo</span></div>
+      </div>
+      <div class="explain-grid">
+        <div><code>using System;</code><p>Permite utilizar funcionalidades básicas da biblioteca System.</p></div>
+        <div><code>static void Main()</code><p>Define o método de entrada deste exemplo.</p></div>
+        <div><code>Console.WriteLine()</code><p>Apresenta uma mensagem na consola.</p></div>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="quiz-shell">
+        <div class="quiz-intro">
+          <span class="eyebrow">05 / PARTICIPA TU TAMBÉM</span>
+          <h2>Está na hora<br>do desafio.</h2>
+          <p>Responde às perguntas e vê quantas consegues acertar. Podes desafiar os teus colegas!</p>
+          <div class="quiz-stats"><span>03 perguntas</span><span>·</span><span>Escolha múltipla</span></div>
+        </div>
+        <div class="quiz-box" id="quizBox">
+          <div class="quiz-progress"><span id="progressText">PERGUNTA 1 DE 3</span><div><i id="progressBar"></i></div></div>
+          <h3 id="questionText">Qual destes programas é um editor de código e não um IDE completo?</h3>
+          <div class="answers" id="answers">
+            <button class="answer" data-answer="0">Visual Studio</button>
+            <button class="answer" data-answer="1">Visual Studio Code</button>
+            <button class="answer" data-answer="2">JetBrains Rider</button>
+          </div>
+          <div class="quiz-feedback" id="feedback" aria-live="polite"></div>
+          <button class="button primary next-button" id="nextQuestion" disabled>Seguinte →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conclusion-section" id="conclusao">
+      <span class="eyebrow">06 / CONCLUSÃO</span>
+      <h2>Não existe uma única<br><span>ferramenta ideal.</span></h2>
+      <p>A escolha depende do tipo de projeto, das ferramentas necessárias e das preferências do programador. O mais importante é compreender que cada ambiente facilita o desenvolvimento de software à sua maneira.</p>
+      <a href="#inicio" class="button ghost">Voltar ao início ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">C#</span><div><strong>Ambientes de desenvolvimento em C#</strong><small>Trabalho de Avaliação Nº 1 · SDAC · M6</small></div></div>
+    <div class="footer-links">
+      <a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener">Visual Studio ↗</a>
+      <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code ↗</a>
+      <a href="https://www.jetbrains.com/rider/" target="_blank" rel="noopener">Rider ↗</a>
+      <a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank" rel="noopener">Documentação C# ↗</a>
+    </div>
+    <p class="copyright">Feito para aprender, explorar e programar. · 11.º T.G.E.I.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
